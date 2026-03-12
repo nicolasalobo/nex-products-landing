@@ -14,7 +14,16 @@ const SalesPage = () => {
   const navigate = useNavigate();
 
   const handleBuy = () => {
-    window.location.href = "https://pay.cakto.com.br/uj2xwnd_803501";
+    // Botão de compra clicao. Repassando tráfego param URIs.
+    const checkoutBaseUrl = "https://pay.cakto.com.br/uj2xwnd_803501";
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Se a pessoa veio de um anúncio tipo ?utm_source=facebook, levamos o código com ela pra Cakto
+    if (urlParams.toString()) {
+      window.location.href = `${checkoutBaseUrl}?${urlParams.toString()}`;
+    } else {
+      window.location.href = checkoutBaseUrl;
+    }
   };
 
   const scrollToOffer = () => {
