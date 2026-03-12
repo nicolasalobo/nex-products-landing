@@ -14,7 +14,7 @@ const SalesPage = () => {
   const navigate = useNavigate();
 
   const handleBuy = () => {
-    navigate("/confirmation");
+    window.location.href = "https://pay.cakto.com.br/uj2xwnd_803501";
   };
 
   const scrollToOffer = () => {
@@ -37,6 +37,34 @@ const SalesPage = () => {
       >
         ⚠️ ATENÇÃO: Os golpes utilizando Inteligência Artificial aumentaram 400%
         no Brasil. Proteja sua família hoje!
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "1.5rem",
+          borderBottom: "1px solid var(--glass-border)",
+          background: "rgba(15, 23, 42, 0.5)",
+          backdropFilter: "blur(10px)",
+          marginBottom: "2rem",
+        }}
+      >
+        <Shield
+          size={32}
+          color="var(--primary)"
+          style={{ marginRight: "0.5rem" }}
+        />
+        <span
+          style={{
+            fontSize: "1.5rem",
+            fontWeight: "900",
+            letterSpacing: "-0.5px",
+          }}
+        >
+          PROTOCOLO <span style={{ color: "var(--primary)" }}>ESCUDO</span>
+        </span>
       </div>
 
       <header className="section container text-center fade-in">
